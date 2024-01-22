@@ -1,6 +1,6 @@
 abstract  public class Player {
     private String name;
-    private int[] guesses;
+    private int[] guesses = new int[0];
     public Player() {
     }
 

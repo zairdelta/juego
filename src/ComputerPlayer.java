@@ -1,8 +1,8 @@
 import java.util.Arrays;
 import java.util.Random;
+
 public class ComputerPlayer extends Player {
     public ComputerPlayer() {
-
     }
 
     @Override
@@ -10,6 +10,8 @@ public class ComputerPlayer extends Player {
         Random random = new Random();
         int numeroAleatorio = random.nextInt(100) + 1;
         int[] currentGuesses = getGuesses();
+
+
 
         // Crear un nuevo arreglo con un tamaño incrementado en 1 y copiar elementos anteriores
         int[] newGuesses = Arrays.copyOf(currentGuesses, currentGuesses.length + 1);

@@ -18,12 +18,24 @@ public class GuessTheNumberGame {
 
         if (guess == targetNumber) {
             System.out.println("¡Felicidades! " + player.getName() + " ha adivinado el número.");
+            System.out.print("¡Pusiste estos numeros! ");
+            printArray(player.getGuesses());
+
             adivino = true;
         } else {
             System.out.println("Sigue intentando, " + player.getName() + ".");
         }
     }
-
+    private void printArray(int[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
     public void iniciarJuego() {
         HumanPlayer humanPlayer = new HumanPlayer();
         Scanner scanner = new Scanner(System.in);
